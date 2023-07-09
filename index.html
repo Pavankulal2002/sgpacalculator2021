@@ -6,31 +6,29 @@
         <title>2023 SGPA 1st Sem</title>
         <script>
 
-    function calculate()
+        function calculate()
         {
+            var a=parseInt(document.getElementById("math").value);
+            var b=parseInt(document.getElementById("os").value);
+            var c=parseInt(document.getElementById("ds").value);
+            var d=parseInt(document.getElementById("cn").value);
+            var e=parseInt(document.getElementById("daa").value);
+            var f=parseInt(document.getElementById("dslab").value);
+            var g=parseInt(document.getElementById("cnlab").value);
+            var h=parseInt(document.getElementById("rmipr").value);
 
-        var a=parseInt(document.getElementById("math").value);
-        var b=parseInt(document.getElementById("os").value);
-        var c=parseInt(document.getElementById("ds").value);
-        var d=parseInt(document.getElementById("cn").value);
-        var e=parseInt(document.getElementById("daa").value);
-        var f=parseInt(document.getElementById("dslab").value);
-        var g=parseInt(document.getElementById("cnlab").value);
-        var h=parseInt(document.getElementById("rmipr").value);
+            var aa=4*marks(a);
+            var ab=4*marks(b);
+            var ac=3*marks(c);
+            var ad=3*marks(d);
+            var ae=5*marks(e);
+            var af=1.5*marks(f);
+            var ag=1.5*marks(g);
+            var ah=2*marks(h);
 
-       var aa=4*marks(a);
-       var ab=4*marks(b);
-       var ac=3*marks(c);
-       var ad=3*marks(d);
-       var ae=5*marks(e);
-       var af=1.5*marks(f);
-       var ag=1.5*marks(g);
-       var ah=2*marks(h);
-
-        var z=((aa+ab+ac+ad+ae+af+ag+ah)/23);
-
-       
-        document.getElementById("res").value=parseFloat(Math.round(z * 10) / 10);
+            var z=((aa+ab+ac+ad+ae+af+ag+ah)/23);
+            
+            document.getElementById("res").value=parseFloat(Math.round(z * 10) / 10);
         }
         
         function marks(y)
@@ -52,54 +50,11 @@
             
         }
 
-
-
         </script>
 
-        <style>
-            
-            #calc {
-               background-color:  aqua;
-               padding: 0.5% 2% 0.5% 2%;
-               font-size: 100%;
-            }
-            
-            label{
-               
-                color: aliceblue;
-                margin-top: 5%;
-                font-weight: bold;
-            }
-            input{
-                background-color: rgb(221, 239, 137);
-                margin: 1% 0 2% 0 ;
-                font-weight: bold;
-                text-align: center;
-                font-size: 100%;
-            }
-           *{
-            background-color: rgb(5, 13, 76);
-           }
-           #res{
-            font-size: 200%;
-            width: 150px;
-            background-color: rgb(217, 237, 198);
-            color: red;
-           }
-           #h{
-            color: red;
-            font-size: x-large;
-            margin-bottom: 7%;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-           
-           }
-
-            
-        </style>
-
-
+        <link rel="stylesheet" href="style.css">
     </head>
-<center>
+    <center>
     <body id="bd">
         <b id="h">MCA 2023 SGPA CALCULATOR</b>
         <br>
@@ -145,6 +100,13 @@
 
     <p style="color:red; font-size:large">Your CGPA/SGPA is</p>
     <input type="text" id="res" disabled>
+
+    <footer>
+        <p class="footer-heart">
+            Made with <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+                <img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> by <a href="https://github.com/noobshubham" target="_blank">SHUBHAM</a>
+          </p>
+      </footer>
 
 </center>
     </body>
