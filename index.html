@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1"content="width=device-height, initial-scale=1" /> 
+ 
+        <title>2022 SGPA 1st Sem</title>
+        <script>
+
+    function calculate()
+        {
+
+        var a=parseInt(document.getElementById("math").value);
+        var b=parseInt(document.getElementById("os").value);
+        var c=parseInt(document.getElementById("ds").value);
+        var d=parseInt(document.getElementById("cn").value);
+        var e=parseInt(document.getElementById("daa").value);
+        var f=parseInt(document.getElementById("dslab").value);
+        var g=parseInt(document.getElementById("cnlab").value);
+        var h=parseInt(document.getElementById("rmipr").value);
+
+       var aa=4*marks(a);
+       var ab=4*marks(b);
+       var ac=3*marks(c);
+       var ad=3*marks(d);
+       var ae=5*marks(e);
+       var af=1.5*marks(f);
+       var ag=1.5*marks(g);
+       var ah=2*marks(h);
+
+        var z=((aa+ab+ac+ad+ae+af+ag+ah)/23);
+
+       
+        document.getElementById("res").value=parseFloat(Math.round(z * 10) / 10);
+        }
+        
+        function marks(y)
+        {
+            if(y>=90)
+            return 10;
+            else if (y<=89&&y>=80)
+            return 9;
+            else if (y<=79&&y>=70)
+            return 8;
+            else if (y<=69&&y>=60)
+            return 7;
+            else if (y<=59&&y>=55)
+            return 6;
+            else if (y<=54&&y>=50)
+            return 5;
+            else
+            return 0;
+            
+        }
+
+
+
+        </script>
+
+        <style>
+            
+            #calc {
+               background-color:  aqua;
+               padding: 0.5% 2% 0.5% 2%;
+               font-size: 100%;
+            }
+            
+            label{
+               
+                color: aliceblue;
+                margin-top: 5%;
+                font-weight: bold;
+            }
+            input{
+                background-color: rgb(221, 239, 137);
+                margin: 1% 0 2% 0 ;
+                font-weight: bold;
+                text-align: center;
+                font-size: 100%;
+            }
+           *{
+            background-color: rgb(5, 13, 76);
+           }
+           #res{
+            font-size: 200%;
+            width: 150px;
+            background-color: rgb(217, 237, 198);
+            color: red;
+           }
+           #h{
+            color: red;
+            font-size: x-large;
+            margin-bottom: 7%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           
+           }
+
+            
+        </style>
+
+
+    </head>
+<center>
+    <body id="bd">
+        <b id="h">2022 SGPA CALCULATOR</b>
+        <br>
+        <br>
+        
+        <label>22MCA11 / MATH</label>
+        <br>
+        <input type="text" id="math">
+        </br>
+        <label>22MCA12 / OS</label>
+        </br>
+        <input type="text" id="os">
+        </br>
+        <label>22MCA13 / DSA</label>
+        </br>
+        <input type="text" id="ds">
+        </br>
+        <label>22MCA14 / CN</label>
+        <br>
+        <input type="text" id="cn">
+
+        </br>
+        <label>22MCA15 / DAA</label>
+        <br>
+        <input type="text" id="daa">
+
+        </br>
+         <label>22MCAL16 / DS Lab</label>
+         <br>
+         <input type="text" id="dslab">
+        </br>
+        <label>22MCAL17 / CN Lab</label>
+        <br>
+        <input type="text" id="cnlab">
+
+        </br>
+        <label>22RMI18 / RMIPR</label>
+        <br>
+        <input type="text" id="rmipr">
+        <br>
+
+    <input type="button" value="calculate" id="calc" onclick="calculate()"></input>
+
+    <p style="color:red; font-size:large">Your CGPA/SGPA is</p>
+    <input type="text" id="res" disabled>
+
+</center>
+    </body>
+  
+
+
+</html>
